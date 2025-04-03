@@ -24,3 +24,44 @@ TreeNode* initTree() {
 
     return root;
 }
+// 前序遍历二叉树
+void preOrderTraversal(TreeNode* root) {
+    if (root == nullptr) return;
+    std::cout << root->val << " ";
+    preOrderTraversal(root->left);
+    preOrderTraversal(root->right);
+}
+
+// 中序遍历二叉树
+void inOrderTraversal(TreeNode* root) {
+    if (root == nullptr) return;
+    inOrderTraversal(root->left);
+    std::cout << root->val << " ";
+    inOrderTraversal(root->right);
+}
+
+// 后序遍历二叉树
+void postOrderTraversal(TreeNode* root) {
+    if (root == nullptr) return;
+    postOrderTraversal(root->left);
+    postOrderTraversal(root->right);
+    std::cout << root->val << " ";
+}
+
+int main() {
+    TreeNode* root = initTree();
+
+    std::cout << "Preorder traversal: ";
+    preOrderTraversal(root);
+    std::cout << std::endl;
+
+    std::cout << "Inorder traversal: ";
+    inOrderTraversal(root);
+    std::cout << std::endl;
+
+    std::cout << "Postorder traversal: ";
+    postOrderTraversal(root);
+    std::cout << std::endl;
+
+    return 0;
+}
