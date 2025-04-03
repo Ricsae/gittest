@@ -1,7 +1,7 @@
 // 假设我们使用二叉树作为示例，以下是一个简单的二叉树节点结构体定义和初始化函数
 #include <iostream>
 
-// 定义二叉树节点结构体
+// 定义二叉树节点结构体123122
 struct TreeNode {
     int val;
     TreeNode *left;
